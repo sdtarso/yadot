@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
+const typography = require("@tailwindcss/typography");
 
 const config: Config = {
   content: [
@@ -10,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
@@ -29,8 +30,17 @@ const config: Config = {
           dark: "#21575B",
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              textDecoration: 'none',
+            }
+          }
+        }
+      }
     },
   },
-  plugins: [],
+  plugins: [typography],
 };
 export default config;

@@ -7,6 +7,10 @@ export function DrawerBody({ onClose }: { onClose: () => void }) {
       label: "Hupper Guide",
     },
     {
+      link: "hupper-guide/combinacoes-elementares",
+      label: "Combinações Elementares",
+    },
+    {
       link: "#",
       label: "WIP",
     },

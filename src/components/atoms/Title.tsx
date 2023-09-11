@@ -1,13 +1,25 @@
 import { ReactNode } from "react";
 
-export function Title({ children }: { children: ReactNode }) {
-  return (
-    <h1 className="text-3xl font-semibold text-neutral-900">{children}</h1>
-  );
+export enum TitlesVariants {
+  H1 = "h1",
+  H2 = "h2",
+  H3 = "h3",
+  H4 = "h4",
+  H5 = "h5",
 }
 
-export function SubTitle({ children }: { children: ReactNode }) {
-  return (
-    <h2 className="text-2xl font-semibold text-neutral-800">{children}</h2>
-  );
+interface TitleProps {
+  children: ReactNode;
+  className?: string;
+  variant?: TitlesVariants;
+}
+
+export function Title({
+  children,
+  className = "",
+  variant = TitlesVariants.H2,
+}: TitleProps) {
+  const Tag = `${variant}`;
+  // @ts-ignore
+  return <Tag className={className}>{children}</Tag>;
 }

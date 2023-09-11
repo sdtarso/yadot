@@ -6,7 +6,7 @@ export function DrawerHeader({ onClose }: { onClose: () => void }) {
   return (
     <div className="p-4 border-b flex items-center justify-between">
       <Link href="/">
-        <Title>YADOT</Title>
+        <Title className="m-0">YADOT</Title>
       </Link>
       <Button variant={ButtonVariants.FLAT} onClick={onClose}>
         <MdClose size={32}></MdClose>

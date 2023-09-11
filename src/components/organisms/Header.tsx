@@ -19,7 +19,7 @@ export function Header({}: HeaderProps) {
         </Button>
         <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
         <Link href="/">
-          <Title>YADOT</Title>
+          <Title className="m-0">YADOT</Title>
         </Link>
       </div>
     </header>
