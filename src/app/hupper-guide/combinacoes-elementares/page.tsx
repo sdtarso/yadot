@@ -1,6 +1,5 @@
-import { Title, TitlesVariants } from "@/components/atoms";
-import { elementalCombinationRows } from "@/data/elemental-combinations";
-import { CombinationTableHeader, CombinationTableRow } from "@molecules";
+import { Title, TitlesVariants } from "@atoms";
+import { ElementalCombinationChart } from "@organisms";
 
 export default function HupperGuide({}) {
   return (
@@ -15,21 +14,17 @@ export default function HupperGuide({}) {
       </p>
       <p>
         Ao aplicar dois estados diferentes em um inimigo, independentemente da
-        ordem, uma combinação elementar é gerada, essas combinações podem gerar
-        buff para os huppermagos ou penalidades para os inimigos, duram 1 turno,
-        e podem ser desencantados, veja abaixo.
+        ordem, uma combinação elementar é gerada, Ao total são 6 combinações
+        elementares possível, descritas abaixo, cada combinação elementar dá um
+        bonus de <b>50 de potência</b> para o huppermago, que não pode ser
+        desencantados.
       </p>
-      <div className="text-center max-w-5xl mx-auto">
-        <CombinationTableHeader />
-        {elementalCombinationRows.map((row, key) => (
-          <CombinationTableRow key={key} {...row} />
-        ))}
-      </div>
-      <small>
-        Os efeitos são os mesmos para todos os feitiços que fazem com que os
-        alvos recebam um combo de estado elementar, e não importa a ordem em que
-        os estados são aplicados.
-      </small>
+      <p>
+        Além disso, essas combinações podem gerar buffs para os huppermagos e
+        debuffs para os inimigos, duram 1 turno, e podem ser desencantados, veja
+        abaixo.
+      </p>
+      <ElementalCombinationChart />
     </section>
   );
 }

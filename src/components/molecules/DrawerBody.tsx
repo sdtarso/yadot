@@ -3,11 +3,11 @@ import Link from "next/link";
 export function DrawerBody({ onClose }: { onClose: () => void }) {
   const items = [
     {
-      link: "hupper-guide",
+      link: "/hupper-guide",
       label: "Hupper Guide",
     },
     {
-      link: "hupper-guide/combinacoes-elementares",
+      link: "/hupper-guide/combinacoes-elementares",
       label: "Combinações Elementares",
     },
     {

@@ -2,6 +2,7 @@ import RangeIcon from "@images/icons/range.webp";
 import MpIcon from "@images/icons/mp.webp";
 import ApIcon from "@images/icons/ap.webp";
 import DodgeIcon from "@images/icons/dodge.webp";
+import DamageIcon from "@images/icons/damage.webp";
 import { CombinationTableRowProps } from "@/components/molecules";
 
 const StrAgi = {
@@ -14,7 +15,7 @@ const StrAgi = {
   ),
 };
 const StrInt = {
-  icon: RangeIcon,
+  icon: DamageIcon,
   caption: "Damage",
   children: (
     <small>
@@ -42,7 +43,7 @@ const AgiInt = {
   ),
 };
 const AgiCha = {
-  icon: MpIcon,
+  icon: DamageIcon,
   caption: "PM",
   children: (
     <small>
@@ -65,24 +66,23 @@ export { StrAgi, StrInt, StrCha, AgiInt, AgiCha, IntCha };
 
 export const strengthCombinations: CombinationTableRowProps = {
   element: "Strength",
-  items: [null, StrAgi, StrInt, StrCha],
+  items: [StrCha, StrInt, StrAgi],
 };
 export const agilityCombinations: CombinationTableRowProps = {
   element: "Agility",
-  items: [StrAgi, null, AgiInt, AgiCha],
+  items: [AgiCha, AgiInt, null],
 };
 export const intelCombinations: CombinationTableRowProps = {
   element: "Intelligence",
-  items: [StrInt, AgiInt, null, IntCha],
+  items: [IntCha, null, null],
 };
 export const chanceCombinations: CombinationTableRowProps = {
   element: "Chance",
-  items: [StrCha, AgiCha, IntCha, null],
+  items: [StrCha, AgiCha, IntCha],
 };
 
 export const elementalCombinationRows: CombinationTableRowProps[] = [
   strengthCombinations,
   agilityCombinations,
   intelCombinations,
-  chanceCombinations,
 ];
