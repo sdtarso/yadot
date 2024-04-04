@@ -11,8 +11,8 @@ export function DrawerBody({ onClose }: { onClose: () => void }) {
       label: "Combinações Elementares",
     },
     {
-      link: "#",
-      label: "WIP",
+      link: "/calculadora-nevark",
+      label: "Calculadora Nevark",
     },
   ];
 
